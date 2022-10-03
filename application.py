@@ -26,4 +26,3 @@ def index():
     hello="world"
     return hello
 
-application.run(ssl_context=("cert.pem", "key.pem"))
