@@ -25,4 +25,5 @@ def index():
         return {
             jsonData
         }
-    return "hello"
+    hello="world"
+    return hello
