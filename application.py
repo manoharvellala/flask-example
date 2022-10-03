@@ -25,4 +25,4 @@ def index():
         return {
             'response' : 'I am the response'
         }
-    return render_template('index.html')
+    return "hello"
