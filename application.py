@@ -16,3 +16,13 @@ def testfn():
     if request.method == 'POST':
         print(request.get_json())  # parse as JSON
         return 'Sucesss', 200
+
+@application.route('/index', methods=["GET", "POST"])
+def index():
+    if request.method == "POST":
+        jsonData = request.get_json()
+        print(jsonData)
+        return {
+            'response' : 'I am the response'
+        }
+    return render_template('index.html')
