@@ -23,6 +23,6 @@ def index():
         jsonData = request.get_json()
         print(jsonData)
         return {
-            'response' : '{jsonData}'
+            jsonData
         }
     return "hello"
