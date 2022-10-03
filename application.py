@@ -2,6 +2,10 @@ from email.mime import application
 from flask import Flask, jsonify, request, render_template
 from flask import Flask
 application=Flask(__name__)
+from OpenSSL import SSL
+context = SSL.Context(SSL.PROTOCOL_TLSv1_2)
+context.use_privatekey_file('server.key')
+context.use_certificate_file('server.crt')   
 
 @application.route('/')
 def helloWorld():
