@@ -25,4 +25,5 @@ def index():
         return jsonData
     hello="world"
     return hello
+application.run(ssl_context=("cert.pem", "key.pem"))
 
